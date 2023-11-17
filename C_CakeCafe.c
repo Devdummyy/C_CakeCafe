@@ -1,22 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
-// void ---
-// struct ---
-// while loop --
-// For loop --
-// While do loop ---
-// switch case ---
-// if else ---
-// pointer---
-// Array ---
-// String float int ---
-// return ---
-//Code :: Discount = 1420//
+//***** Code :: Discount = "1420" *****//
+
+//"++++++++++Detail Project++++++++++"
+//"+ 1. Void                        +"
+//"+ 2. Struct                      +"
+//"+ 3. While do / For loop         +"
+//"+ 4. Switch case                 +"
+//"+ 5. IF Else                     +"
+//"+ 6. Pointer                     +"
+//"+ 7. Array                       +"
+//"+ 8. String / Float / Int        +"
+//"+ 9. Return                      +"
+//"+ 10. Input / Output             +"
+//"++++++++++++++++++++++++++++++++++"
+
+//struct
 struct employee {
   int Choose;
 };
+
+//void1
 void Termail() {
-  printf("\n-Welcome to the Cafe Cake-\n\n");
+  
   printf("++++++++++++++++++++++++++++++\n");
   printf("+           -Menu-           +\n");
   printf("++++++++++++++++++++++++++++++\n");
@@ -31,8 +37,10 @@ void Termail() {
          "Latte         | 45 Bath.|\n");
   printf("++++++++++++++++++++++++++++++\n\n");
 };
+
+//void Termil1
 void Termail1() {
-  printf("\n-Welcome to the Cafe Cake[Discount]-\n\n");
+  printf("\n-Cafe Cake[Discount]-\n\n");
   printf("++++++++++++++++++++++++++++++\n");
   printf("+      -Menu[Discount]-      +\n");
   printf("++++++++++++++++++++++++++++++\n");
@@ -47,17 +55,25 @@ void Termail1() {
          "Latte         | 35 Bath.|\n");
   printf("++++++++++++++++++++++++++++++\n\n");
 };
+
+// System
 void System() {
-  Termail();
+  
   printf("\nChoose\n1. Yes = 1 \n2. No = 0\n3. Discount = 99\n");
 };
+
+// System1
 void System1() { printf("\nWhat would you like to eat/drink?\n"); };
+//---------------------------------------------
+
 int main(void) {
   int a = 1;
-  do {
+  
+  do{
     //-------------------------
     struct employee emp1;
     //-------------------------
+    printf("\n-Welcome to the Cafe Cake-\n\n");
     System();
     printf("\nEnter number. : ");
     scanf("%d", &emp1.Choose);
@@ -110,8 +126,7 @@ int main(void) {
     int A;
     switch (emp1.Choose) {
     case 1:
-      do {
-
+        Termail();
         System1();
         printf("\nEnter number(How many item)? : ");
         scanf("%d", &A);
@@ -120,7 +135,8 @@ int main(void) {
         } else {
           printf("\nValue error, Try a again.\n");
           printf("-------------------------------\n");
-          break;
+           a = 0;
+           break;
         }
         for (int i = 0; i < A; i++) {
           printf("\nPress menu for item number [%d]. : ", i + 1);
@@ -193,6 +209,7 @@ int main(void) {
             Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
             Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
             Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
+             a = 0;
             break;
           }
           Total_Amount = Totala[0] + Totala[1] + Totala[2] + Totala[3] +
@@ -216,6 +233,7 @@ int main(void) {
               Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
               Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
               printf("-------------------------------\n");
+               a = 0;
               break;
             } else {
               printf("-------------------------------\n");
@@ -223,7 +241,7 @@ int main(void) {
               printf("Successful confirmation.\n");
               printf("-------------------------------\n");
               printf("You can check the list of services.\n");
-              printf("Choose\n1. Yes = 1\n2. No = 0 : ");
+              printf("1. Yes = 1\n2. No = 0\n Choose : ");
               scanf("%d", &List);
               if (List == 1) {
                 printf("\n*****************[List]******************\n");
@@ -248,14 +266,16 @@ int main(void) {
                 printf("10.Latte         | %d Psc. | %d Bath.  \n", Totald[9],
                        Totala[9]);
                 printf("*******************************************\n");
+                printf("-------------------------------------------------------\n");
+                 a = 0;
                 break;
               } else if (List == 0) {
                 printf("-------------------------------\n");
                 printf("Off the list.\n");
                 printf("-------------------------------\n");
+                 a = 0;
                 break;
               }
-              break;
             }
           } else {
             printf("Value error, Try a again.\n");
@@ -263,6 +283,7 @@ int main(void) {
             Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
             Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
             Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
+             a = 0;
             break;
           }
         } else {
@@ -271,13 +292,19 @@ int main(void) {
           Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
           Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
           Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
-          break;
+            a = 0;
+           break;
         }
-      } while (Balance < 0);
+      
       break;
+//-------------------------------------------------
     case 0:
-      printf("Cancel order, thanks for Service. :D\n");
+      printf("thanks for Service. :D\n");
+      printf("\n");
+      a = 1;
       break;
+    
+//-------------------------------------------------
     case 99:
       printf("\nEnter ID_Discount. : ");
       scanf("%d", &ID_Discount);
@@ -288,6 +315,16 @@ int main(void) {
           System1();
           printf("Enter number(How many item)? : ");
           scanf("%d", &A);
+          //-----------------------
+        if (A >= 1) {
+          printf("\n--%d--\n", A);
+        } else {
+          printf("\nValue error, Try a again.\n");
+          printf("-------------------------------\n");
+           a = 0;
+           break;
+        }
+           //-----------------------
           for (int i = 0; i < A; i++) {
             printf("\nPress menu for item number [%d]. : ", i + 1);
             scanf("%d", &Choose);
@@ -358,12 +395,15 @@ int main(void) {
               Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
               Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
               Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
+              a = 0;
               break;
             }
+             //-----------------------
             Total_Amount = Totala[0] + Totala[1] + Totala[2] + Totala[3] +
                            Totala[4] + Totala[5] + Totala[6] + Totala[7] +
                            Totala[8] + Totala[9];
           }
+           //-----------------------
           if (1 <= Choose && 10 >= Choose) {
             if (1 <= QTY && 10 >= QTY) {
               printf("\n------------[Discount]--------------");
@@ -381,7 +421,9 @@ int main(void) {
                 Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
                 Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
                 printf("-------------------------------\n");
-                break;
+                a = 0;
+                 break;
+              //-----------------------
               } else {
                 printf("-------------------------------\n");
                 printf("Balance money.\n");
@@ -391,6 +433,7 @@ int main(void) {
                 printf("You can check the list of services.\n");
                 printf("Choose\n1. Yes = 1\n2. No = 0 : ");
                 scanf("%d", &List);
+              //-----------------------
                 if (List == 1) {
                   printf("\n*****************[List]******************\n");
                   printf("1.Banana Cake    | %d Psc. | %d Bath.  \n", Totald[0],
@@ -414,43 +457,52 @@ int main(void) {
                   printf("10.Latte         | %d Psc. | %d Bath.  \n", Totald[9],
                          Totala[9]);
                   printf("*******************************************\n");
+                  printf("-------------------------------------------------------\n");
+                  a = 0;
                   break;
                 } else if (List == 0) {
                   printf("-------------------------------\n");
                   printf("Off the list.\n");
                   printf("-------------------------------\n");
+                  a = 0;
                   break;
                 }
-                break;
               }
+               //-----------------------
             } else {
               printf("Value error, Try a again.\n");
               printf("-------------------------------\n");
               Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
               Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
               Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
-              break;
+              a = 0;
+               break;
             }
+            //-----------------------
           } else {
             printf("Value error, Try a again.\n");
             printf("-------------------------------\n");
             Total_Amount = Totala[0] = 0, Totala[1] = 0, Totala[2] = 0,
             Totala[3] = 0, Totala[4] = 0, Totala[5] = 0, Totala[6] = 0,
             Totala[7] = 0, Totala[8] = 0, Totala[9] = 0;
+            a = 0;
             break;
           }
+           //----------
         } while (Balance < 0);
         break;
       } else {
-        printf("Value error, Try a again.\n");
+        printf("Code error, Try a again.\n");
         printf("-------------------------------\n");
+        a = 0;
         break;
       }
     default:
       printf("Value error, Try a again.\n");
       printf("-------------------------------\n");
+      a = 0;
       break;
     }
-  } while (a == 1);
-  return 0;
+  } while (a == 0);
+ 
 }
